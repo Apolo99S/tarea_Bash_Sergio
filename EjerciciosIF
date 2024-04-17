@@ -1,0 +1,31 @@
+# 1º Ejercicio, se utiliza el "-e" para ahorrar escribir muchas veces "echo"
+
+#/bin/bash
+
+echo -e "Vas a aplicar  a una ofetra laboral.\nPara pasar la preseleccíon debes cumplir con los siguientes requisitos:"
+read -p "1. Vives en Bilbao? S/N:  " lugar
+read -p "2. Tienes mas de 18 años? S/N:  " edad
+read -p "3. Tienes experiencia previa de al menos 1 año? S/N:  " exp
+read -p "4. Disponibilidad para viajar? S/N:  " viaje
+read -p "5. Inglés al menos B1? S/N:  " ingles
+
+if [ "$lugar" == "s" ] && [ "$edad" == "s" ] && [ "$exp" == "s" ] && [ "$viaje" == "s" ] && [ "$ingles" == "s" ]; then
+echo -e  "Resultado:\n1. Vives en Bilbao? $lugar\n2. Tienes mas de 18 años? $edad\n3. Tienes experiencia previa de al menos 1 año? $exp\n4. Disponibilidad para viajar? $viaje\n5. Inglés al menos B1? $ingles\nEstas preseleccionado, felicidades."
+else
+echo -e "Resultado:\n1. Vives en Bilbao? $lugar\n2. Tienes mas de 18 años? $edad\n3. Tienes experiencia previa de al menos 1 año? $exp\n4. Disponibilidad para viajar? $viaje\n5. Inglés al menos B1? $ingles\nNo estas preseleccionado, lo siento"
+fi
+
+
+# 2º Ejercicio, igual que el primero se utiliza "-e"
+#/bin/bash
+
+echo "Vas a viajar a Australia y para conseguirlo debes cumplr los siguientes requisitos:"
+read -p "1. Tienes pasaporte con al menos 6 meses de vigencia? S/N: " pasaporte
+read -p "2. Permanecer un  maximo de 90 días? S/N: " dias
+read -p "3. Tienes antecedentes penales? S/N: " antecedentes
+
+if [ "$pasaporte" == "s" ] && [ "$dias" == "s" ] && [ "$antecedentes" == "n" ]; then
+echo -e "Resultado:\n1. Tienes pasaporte con al menos 6 meses de vigencia? S/N: $pasaporte\n2. Permanecer un maximo de 90 días? S/N: $dias\n3. Tienes antecedentes penales? S/N: $antecedente\nFelicidades, puedes viajar a asutralia."
+else
+echo -e "Resultado:\n1. Tienes pasaporte con al menos 6 meses de vigencia? S/N: $pasaporte\n2. Permanecer un maximo de 90 días? S/N: $dias\n3. Tienes antecedentes penales? S/N: $antecedente\nLo siento, no puedes viajar a asutralia."
+fi
